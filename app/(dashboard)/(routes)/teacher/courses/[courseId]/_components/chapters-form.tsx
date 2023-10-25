@@ -61,8 +61,8 @@ export const ChaptersForm = ({
        }
     }
 
-    const onEdit=()=>{
-        
+    const onEdit=(id:string)=>{
+        router.push(`/teacher/courses/${courseId}/chapters/${id}`)
     }
 
     const onReorder=async(updateData:{id:string,position:number}[])=>{
