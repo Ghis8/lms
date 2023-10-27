@@ -1,7 +1,15 @@
+import { db } from "@/lib/db"
+
 const {PrismaClient}=require('@prisma/client')
 const database=new PrismaClient()
 
 async function main(){
+    const categories=await database.category.findMany({
+        orderBy:{
+            name:'asc'
+        }   
+    })
+    
     try {
         await database.category.createMany({
             data:[
@@ -10,7 +18,7 @@ async function main(){
                 {name:"Fitness"},
                 {name:"Accounting"},
                 {name:"Engineering"},
-                {name:"Filming"}
+                {name:"Filming"},
             ]
         })
 
