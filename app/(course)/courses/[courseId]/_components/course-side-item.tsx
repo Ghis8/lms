@@ -27,7 +27,7 @@ export const CourseSidebarItem=({
     const isActive=pathname?.includes(id)
 
     const onClick=()=>{
-        router.push(`'/courses/${courseId}/chapters/${id}`)
+        router.push(`/courses/${courseId}/chapters/${id}`)
     }
     return (
         <button
@@ -35,7 +35,7 @@ export const CourseSidebarItem=({
             type="button"
             className={cn(
                 "flex items-cenyer gap-x-2 text-slate-500 text-sm font-[500] pl-6 transition-all hover:text-slate-600 hover:bg-slate-300/20",
-                isActive && "text-slate-200/20 hover:text-slate-200",
+                isActive && "text-slate-700 hover:text-slate-500",
                 isCompleted && "text-emerald-700 hover:text-emerald-700",
                 isCompleted && isActive && "bg-emerald-200/20"
             )}
