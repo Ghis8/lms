@@ -4,7 +4,8 @@ import { authMiddleware } from "@clerk/nextjs";
 // Please edit this to allow other routes to be public as needed.
 // See https://clerk.com/docs/references/nextjs/auth-middleware for more information about configuring your Middleware
 export default authMiddleware({
-    // publicRoutes:["/test"] to add an unprocted route
+    publicRoutes:["/api/webhook"] //to add an unprocted route
+
 });
  
 export const config = {
