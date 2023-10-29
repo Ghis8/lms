@@ -18,6 +18,21 @@ module.exports =withUt( {
       },
     },
     extend: {
+      keyframes:{
+        spin:{
+          "0%": { transform: 'rotate(0deg)' },
+          "100%": { transform: 'rotate(360deg)' }
+        }
+      },
+      animation:{
+        spinner:'spin 2s linear infinite'
+      },
+
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+        'gradient-conic':
+          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
