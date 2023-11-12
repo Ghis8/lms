@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image"
+
 export default function Loading() {
     return <>
       <style jsx>{`
@@ -9,7 +10,6 @@ export default function Loading() {
             border-radius: 50%;
             width: 120px;
             height: 120px;
-            animation: spin 2s linear infinite;
             margin: auto;
           }
   
@@ -18,7 +18,7 @@ export default function Loading() {
             100% { transform: rotate(360deg); }
           }
       `}</style>
-      <div className="loader flex justify-center items-center mt-24 py-5 px-5">
+      <div className="loader flex justify-center items-center mt-[50%] py-5 px-5">
         <Image src="/img/LMS.png" width={200} height={200} alt="logo" />
       </div> 
     </>

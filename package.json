@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall":"prisma generate",
+    "postinstall": "prisma generate",
     "db:generate": "npx prisma generate && npx prisma db push",
     "db:reset": "npx prisma migrate reset && npx prisma db push && node ./scripts/seed.ts"
   },
@@ -41,6 +41,7 @@
     "eslint-config-next": "13.5.6",
     "lucide-react": "^0.288.0",
     "next": "13.5.6",
+    "next-translate": "^2.6.2",
     "postcss": "8.4.31",
     "query-string": "^8.1.0",
     "react": "18.2.0",

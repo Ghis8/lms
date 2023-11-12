@@ -1,6 +1,6 @@
 'use client'
 
-import { UserButton, auth, useAuth } from "@clerk/nextjs"
+import { UserButton, auth, useAuth, useClerk } from "@clerk/nextjs"
 import { usePathname } from "next/navigation"
 import { Button } from "./ui/button"
 import { LogOut } from "lucide-react"
@@ -17,6 +17,7 @@ export const NavbarRoutes=()=>{
 
     const isSearchPage=pathname === '/search'
 
+    const {user}=useClerk()
     return(
         <>
             {isSearchPage && (
@@ -41,6 +42,10 @@ export const NavbarRoutes=()=>{
                         </Link>
                     ):null
                 }
+                <div className="flex items-center space-x-2 cursor-text">
+                    <span className="text-sm text-blue-500">{user?.firstName}</span>
+                    <span className="text-sm text-blue-500">{user?.lastName}</span>
+                </div>
                 <UserButton afterSignOutUrl="/"/>
             </div>
         </>
