@@ -4,7 +4,27 @@ It is a learning platform where teacher can upload video of their respective cou
 # Student
 All student can track their progress on courses purchased!
 
+![ScreenShot](/public/img/lmsScreenShot.png)
 
+## To Run This Project
 
+* Clone the repository
 
-# Still in build
+```bash
+npm install
+# or
+yarn
+
+```
+
+## Get Started
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
