@@ -9,6 +9,7 @@ All student can track their progress on courses purchased!
 ## To Run This Project
 
 * Clone the repository
+* Install dependencies using the command line below
 
 ```bash
 npm install
@@ -17,7 +18,9 @@ yarn
 
 ```
 
-## Get Started
+## Get Started 
+
+* Start the project by running one of these commands
 
 ```bash
 npm run dev
