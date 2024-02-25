@@ -23,7 +23,7 @@ export const SidebarItem=({
 
         const onClick=()=>{
             router.push(href)
-            router.refresh()
+            
         }
 
     return(
