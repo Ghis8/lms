@@ -1,5 +1,3 @@
-import { db } from "@/lib/db"
-
 const {PrismaClient}=require('@prisma/client')
 const database=new PrismaClient()
 
