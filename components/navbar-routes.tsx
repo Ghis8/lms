@@ -13,6 +13,7 @@ export const NavbarRoutes=()=>{
     const pathname=usePathname()
 
     const isTeacherPage=pathname?.startsWith('/teacher')
+    const isPurchasedPage=pathname?.startsWith('/purchased')
     const isCoursePage=pathname?.includes('/courses')
 
     const isSearchPage=pathname === '/search'
@@ -20,7 +21,7 @@ export const NavbarRoutes=()=>{
     const {user}=useClerk()
     return(
         <>
-            {isSearchPage && (
+            {(isSearchPage || isPurchasedPage) && (
                 <div className="hidden md:block">
                     <SearchInput />
                 </div>

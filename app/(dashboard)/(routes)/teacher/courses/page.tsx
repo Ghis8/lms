@@ -20,6 +20,7 @@ const CoursesPage = async() => {
             createdAt:"desc"
         }
     })
+   
     return ( 
         <div className="p-6">
             <DataTable columns={columns} data={courses} />

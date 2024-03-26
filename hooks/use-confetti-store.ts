@@ -13,3 +13,7 @@ export const useConfettiStore=create<ConfettiStore>((set)=>({
         isOpen:false
     })
 }))
+
+export const useStore=create((set)=>{
+    
+})

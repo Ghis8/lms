@@ -19,8 +19,6 @@ const CourseIdPage =async ({
     }:{
         params:{courseId:string}
     }) => {
-
-
         const {userId}=auth()
 
         if(!userId){

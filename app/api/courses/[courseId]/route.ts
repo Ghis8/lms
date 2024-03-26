@@ -10,6 +10,8 @@ const {Video}=new Mux(
     process.env.MUX_TOKEN_SECRET!
 )
 
+
+
 export async function DELETE(
     req:Request,
     {params}:{params:{courseId:string}}

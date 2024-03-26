@@ -74,7 +74,7 @@ export function DataTable<TData, TValue>({
         <Table>
             <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
-                <TableRow key={headerGroup.id}>
+                <TableRow  key={headerGroup.id}>
                 {headerGroup.headers.map((header) => {
                     return (
                     <TableHead key={header.id}>
@@ -116,18 +116,18 @@ export function DataTable<TData, TValue>({
         </div>
             <div className="flex items-center justify-end space-x-2 py-4">
             <Button
-            variant="outline"
-            size="sm"
-            onClick={() => table.previousPage()}
-            disabled={!table.getCanPreviousPage()}
+                variant="outline"
+                size="sm"
+                onClick={() => table.previousPage()}
+                disabled={!table.getCanPreviousPage()}
             >
             Previous
             </Button>
             <Button
-            variant="outline"
-            size="sm"
-            onClick={() => table.nextPage()}
-            disabled={!table.getCanNextPage()}
+                variant="outline"
+                size="sm"
+                onClick={() => table.nextPage()}
+                disabled={!table.getCanNextPage()}
             >
             Next
             </Button>

@@ -22,7 +22,6 @@ const Analytics = async() => {
                     value={totalRevenue}
                     shouldFormat
                 />
-                
                 <DataCard
                     label="Total Sales"
                     value={totalSales}
