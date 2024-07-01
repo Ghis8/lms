@@ -7,17 +7,17 @@ generator client {
 }
 
 datasource db {
-  provider = "mysql"
+  provider = "mongodb"
   url      = env("DATABASE_URL_LOCAL")
   relationMode = "prisma"
 }
 
 model Course{
-  id String @id @default(uuid())
+  id String @id @map("_id")
   userId String
-  title String @db.Text
-  description String? @db.Text
-  imageUrl String? @db.Text
+  title String 
+  description String? 
+  imageUrl String? 
   price Float? 
   isPublished Boolean @default(false)
 
@@ -39,14 +39,14 @@ model Course{
 
 
 model Category{
-  id String @id @default(uuid())
+  id String @id @map("_id")
   name String @unique
   courses Course[]
 }
 model Attachement{
-  id String @id @default(uuid())
+  id String @id @map("_id")
   name String
-  url String @db.Text
+  url String 
 
   courseId String
   course Course @relation(fields: [courseId],references: [id],onDelete: Cascade)
@@ -58,10 +58,10 @@ model Attachement{
 }
 
 model Chapter{
-  id String @id @default(uuid())
+  id String @id @map("_id")
   title String
-  description String? @db.Text
-  videoUrl String? @db.Text
+  description String? 
+  videoUrl String? 
   position Int
   isPublished Boolean @default(false)
   isFree Boolean @default(false)
@@ -80,7 +80,7 @@ model Chapter{
 }
 
 model MuxData{
-  id String @id @default(uuid())
+  id String @id @map("_id")
   assetId String
   playbackId String?
 
@@ -90,7 +90,7 @@ model MuxData{
 }
 
 model UserProgress{
-  id String @id @default(uuid())
+  id String @id @map("_id")
   userId String
 
   chapterId String
@@ -107,7 +107,7 @@ model UserProgress{
 }
 
 model Purchase{
-  id String @id @default(uuid())
+  id String @id @map("_id")
   userId String
 
   courseId String
@@ -123,7 +123,7 @@ model Purchase{
 }
 
 model StipeCustomer{
-  id String @id @default(uuid())
+  id String @id @map("_id")
   userId String @unique
   stripeCustomerId String @unique
 
@@ -132,11 +132,11 @@ model StipeCustomer{
 }
 
 model Quiz{
-  id String @id @default(uuid())
+  id String @id @map("_id")
   studentId String
   courseId String 
-  title String @db.Text
-  description String @db.Text
+  title String 
+  description String 
   timer Float
   questions Question[]
   studentMarks StudentMarks[]
@@ -145,13 +145,11 @@ model Quiz{
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  @@index([courseId])
-  @@unique([courseId])
 }
 
 model Question{
-  id String @id @default(uuid())
-  question String @db.Text 
+  id String @id @map("_id")
+  question String  
   answer String
   answerOptions AnswerOptions[]
 
@@ -166,7 +164,7 @@ model Question{
 }
 
 model AnswerOptions{
-  id String @id @default(uuid())
+  id String @id @map("_id")
   name String
   questionId String
   isCorrect Boolean
@@ -177,7 +175,7 @@ model AnswerOptions{
 }
 
 model StudentMarks{
-  id String @id @default(uuid())
+  id String @id @map("_id")
   studentId String
   marks Int
 
