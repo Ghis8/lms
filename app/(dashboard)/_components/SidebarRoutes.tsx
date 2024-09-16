@@ -2,6 +2,7 @@
 import {BarChart, Compass, Layout, List, MonitorPlay, FileQuestion, MessageSquare, BookCopy} from 'lucide-react'
 import { SidebarItem } from './Sidebar-item'
 import { usePathname } from 'next/navigation'
+import {SheetClose} from '@/components/ui/sheet'
 
 const guestroutes=[
     {
@@ -65,12 +66,14 @@ export const SidebarRoutes=()=>{
         <div className="flex flex-col w-full">
             {
                 routes.map((route)=>(
-                    <SidebarItem 
-                        key={route.href}
-                        icon={route.icon}
-                        label={route.label}
-                        href={route.href}
-                    />
+                    
+                        <SidebarItem 
+                            key={route.href}
+                            icon={route.icon}
+                            label={route.label}
+                            href={route.href}
+                        />
+                    
                 ))
             }
         </div>

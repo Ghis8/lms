@@ -1,5 +1,11 @@
 import { Logo } from "./Logo"
 import { SidebarRoutes } from "./SidebarRoutes"
+import {
+    Sheet,
+    SheetContent,
+    SheetTrigger,
+    SheetClose
+}from '@/components/ui/sheet'
 
 export const Sidebar=()=>{
     return(
